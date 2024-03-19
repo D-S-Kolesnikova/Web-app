@@ -1,0 +1,27 @@
+<!-- Include Plotly.js -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<div id="plot"></div>
+
+<script>
+  var trace1 = {
+    x: {{ outX_list}},
+    y: {{ outY_list}},
+    mode: 'lines+markers',
+    type: 'scatter'
+  };
+
+  var data = [trace1];
+
+  var layout = {
+    title: 'Траектория летательного аппарата',
+    xaxis: {
+      title: 'X (м)'
+    },
+    yaxis: {
+      title: 'Y (м)'
+    }
+  };
+
+  Plotly.newPlot('plot', data, layout);
+</script>

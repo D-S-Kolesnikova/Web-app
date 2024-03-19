@@ -1,13 +1,26 @@
-{% extends "base.html" %}
-{% block title %}Login Page{% endblock %}
-
-{% block content %}
-<form action="#" method="post">
-	<p>What tou want to do?:</p>
-    <button type="submit" name="submit" value="process"> Process </button>
-    <button  type="submit" name="submit" value="runFile"> Run </button> 
-</form>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>ВВОД ИСХОДНЫХ ДАННЫХ</title>
+    </head>
+        <body>
+            <div align="center">
+            <form action="#" method="post">
+                <p>Введите начальную скорость (м/с): <input type="text" name="V0"></p>
+                <p>Введите угол бросания (градусы): <input type="text" name="TETA"></p>
+                <p>Введите массу летательного аппарата (кг): <input type="text" name="M"></p>
+                <p>Введите начальные координаты - Х (м): <input type="text" name="X"></p>
+                <p>Введите начальные координаты - Y (м): <input type="text" name="Y"></p>
+                <p>Введите коэффициент сопротивления - Cx (-): <input type="text" name="Cx"></p>
+                <p>Введите диаметр летательного аппарата - Dm (м): <input type="text" name="D"></p>
+                <button  type="submit" name="submit" value="runFile">Построить таблицу</button>
+                <button  type="submit" name="submit" value="writeFigure">Нарисовать график</button>
+            </form>
+            <!-- <form action="#" method="post">
+                <p>Начать расчет</p>
+                <button  type="submit" name="submit" value="runFile"> Run </button> 
+            </form> -->
+        </body>
 <form action="#" method="get">
     <p>{{ text }}</p>
 </form>
-{% endblock %}
