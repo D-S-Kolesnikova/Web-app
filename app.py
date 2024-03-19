@@ -28,7 +28,8 @@ def exe():
     if request.method == "POST":
         if request.form['submit'] == 'runFile':
             current_dir = os.getcwd()
-            Missile = WinDLL(current_dir + "/Missile-dll.dll")
+            Missile = cdll.LoadLibrary(current_dir + "/missile.so")
+            #Missile = WinDLL(current_dir + "/Missile-dll.dll")
             Missile.MissileModelling.argtypes = [
                 ctypes.c_double,  # x0
                 ctypes.c_double,  # y0
